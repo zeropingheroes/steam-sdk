@@ -29,4 +29,5 @@ it('resolves valid steam id variants', function (string|int $steamid): void {
     ['https://steamcommunity.com/profiles/[U:1:101646894]'],
     ['https://steamcommunity.com/id/gummibeer/'],
     ['https://s.team/p/jbw-bddv'],
+    ['gummibeer'],
 ]);

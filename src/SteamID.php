@@ -48,7 +48,7 @@ class SteamID implements Stringable
                 return null;
             },
             function (string|int $id): ?xPawSteamID {
-                if (is_string($id) && filter_var($id, FILTER_VALIDATE_URL)) {
+                if (is_string($id)) {
                     return app(SteamConnector::class)->resolveVanityUrl($id);
                 }
 

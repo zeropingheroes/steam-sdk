@@ -1,0 +1,13 @@
+{
+    "statusCode": 200,
+    "headers": {
+        "Server": "nginx",
+        "Content-Type": "application\/json; charset=UTF-8",
+        "Expires": "Sat, 25 Oct 2025 22:01:17 GMT",
+        "Date": "Sat, 25 Oct 2025 22:01:17 GMT",
+        "Content-Length": "48",
+        "Connection": "keep-alive"
+    },
+    "data": "{\"response\":{\"success\":42,\"message\":\"No match\"}}",
+    "context": []
+}
