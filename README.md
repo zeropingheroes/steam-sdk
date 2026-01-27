@@ -43,7 +43,7 @@ $steam->getPlayerSummaries($steamid);
 | ✅  | **GET**  | `ISteamUserStats/GetGlobalAchievementPercentagesForApp/v1`     | `$steam->getGlobalAchievementPercentagesForApp()` |
 | 🗒️ | **GET**  | `IPlayerService/GetBadges/v1`                                  |                                                   |
 | 🗒️ | **GET**  | `IPlayerService/GetCommunityBadgeProgress/v1`                  |                                                   |
-| ✅ | **GET**  | `IPlayerService/GetOwnedGames/v1`                              |                                                   |
+| ✅ | **GET**  | `IPlayerService/GetOwnedGames/v1`                              | `$steam->getOwnedGames()`                         |
 | ✅️ | **GET**  | `IPlayerService/GetRecentlyPlayedGames/v1`                     | `$steam->getRecentlyPlayedGames()`                |
 | ✅ | **GET**  | `IPlayerService/GetSteamLevel/v1`                              | `$steam->getSteamLevel()`                         |
 | 🗒️ | **GET**  | `IPlayerService/IsPlayingSharedGame/v1`                        |                                                   |
