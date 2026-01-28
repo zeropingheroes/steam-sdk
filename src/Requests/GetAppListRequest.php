@@ -3,6 +3,7 @@
 namespace Astrotomic\SteamSdk\Requests;
 
 use Astrotomic\SteamSdk\Data\App;
+use Astrotomic\SteamSdk\Data\AppList;
 use Illuminate\Support\Collection;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
@@ -48,10 +49,13 @@ class GetAppListRequest extends Request
     }
 
     /**
-     * @return Collection<array-key, App>
+     * @return AppList
      */
-    public function createDtoFromResponse(Response $response): Collection
+    public function createDtoFromResponse(Response $response): AppList
     {
-        return new Collection(App::collect($response->json('response.apps')));
+        $apps = new Collection(App::collect($response->json('response.apps')));
+        $have_more_results = $response->json('response.have_more_results');
+        $last_appid = $response->json('response.last_appid');
+        return new AppList($apps, $have_more_results, $last_appid);
     }
 }
