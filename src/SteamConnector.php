@@ -4,7 +4,7 @@ namespace Astrotomic\SteamSdk;
 
 use Astrotomic\SteamSdk\Data\AchievementPercentage;
 use Astrotomic\SteamSdk\Data\ApiInterface;
-use Astrotomic\SteamSdk\Data\AppList;
+use Astrotomic\SteamSdk\Data\App;
 use Astrotomic\SteamSdk\Data\Friend;
 use Astrotomic\SteamSdk\Data\LocationCity;
 use Astrotomic\SteamSdk\Data\LocationCountry;
@@ -150,11 +150,9 @@ class SteamConnector extends Connector
     }
 
     /**
-     * @return AppList
+     * @return array<App>
      */
     public function getAppList(
-        ?int $max_results = null,
-        ?int $last_appid = null,
         ?int $if_modified_since = null,
         ?bool $include_games = null,
         ?bool $include_dlc = null,
@@ -162,11 +160,9 @@ class SteamConnector extends Connector
         ?bool $include_videos = null,
         ?bool $include_hardware = null,
         ?string $have_description_language = null,
-    ): AppList {
+    ): array {
         return $this->send(
             new GetAppListRequest(
-                $max_results,
-                $last_appid,
                 $if_modified_since,
                 $include_games,
                 $include_dlc,

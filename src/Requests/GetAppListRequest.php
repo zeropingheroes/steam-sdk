@@ -3,22 +3,23 @@
 namespace Astrotomic\SteamSdk\Requests;
 
 use Astrotomic\SteamSdk\Data\App;
-use Astrotomic\SteamSdk\Data\AppList;
-use Illuminate\Support\Collection;
 use Saloon\Enums\Method;
+use Saloon\Http\Connector;
 use Saloon\Http\Request;
 use Saloon\Http\Response;
+use Saloon\PaginationPlugin\Contracts\HasRequestPagination;
+use Saloon\PaginationPlugin\Contracts\Paginatable;
+use Saloon\PaginationPlugin\CursorPaginator;
+use Saloon\PaginationPlugin\Paginator;
 use Saloon\Traits\Request\CreatesDtoFromResponse;
 
-class GetAppListRequest extends Request
+class GetAppListRequest extends Request implements HasRequestPagination, Paginatable
 {
     use CreatesDtoFromResponse;
 
     protected Method $method = Method::GET;
 
     public function __construct(
-        public readonly ?int $max_results = null,
-        public readonly ?int $last_appid = null,
         public readonly ?int $if_modified_since = null,
         public readonly ?bool $include_games = null,
         public readonly ?bool $include_dlc = null,
@@ -36,8 +37,6 @@ class GetAppListRequest extends Request
     public function defaultQuery(): array
     {
         return array_filter([
-            'max_results' => $this->max_results,
-            'last_appid' => $this->last_appid,
             'if_modified_since' => $this->if_modified_since,
             'include_games' => $this->include_games,
             'include_dlc' => $this->include_dlc,
@@ -49,13 +48,44 @@ class GetAppListRequest extends Request
     }
 
     /**
-     * @return AppList
+     * @return array<App>
      */
-    public function createDtoFromResponse(Response $response): AppList
+    public function createDtoFromResponse(Response $response): array
     {
-        $apps = new Collection(App::collect($response->json('response.apps')));
-        $have_more_results = $response->json('response.have_more_results');
-        $last_appid = $response->json('response.last_appid');
-        return new AppList($apps, $have_more_results, $last_appid);
+        return App::collect($response->json('response.apps'));
+    }
+
+    public function paginate(Connector $connector): Paginator
+    {
+        return new class(connector: $connector, request: $this) extends CursorPaginator
+        {
+            protected function applyPagination(Request $request): Request
+            {
+                if ($this->currentResponse instanceof Response) {
+                    $request->query()->add('last_appid', $this->getNextCursor($this->currentResponse));
+                }
+
+                if (isset($this->perPageLimit)) {
+                    $request->query()->add('max_results', $this->perPageLimit);
+                }
+
+                return $request;
+            }
+
+            protected function getNextCursor(Response $response): int|string
+            {
+                return $response->json('response.last_appid');
+            }
+
+            protected function isLastPage(Response $response): bool
+            {
+                return is_null($response->json('response.have_more_results'));
+            }
+
+            protected function getPageItems(Response $response, Request $request): array
+            {
+                return $response->dtoOrFail();
+            }
+        };
     }
 }
