@@ -17,7 +17,7 @@ class GetOwnedGamesRequest extends Request
 
     public function __construct(
         public readonly string $steamid,
-        public readonly ?bool $include_appinfo = false,
+        public readonly ?bool $include_appinfo = null,
         public readonly ?bool $include_extended_appinfo = null,
         public readonly ?bool $include_played_free_games = null,
     ) {}
@@ -29,12 +29,15 @@ class GetOwnedGamesRequest extends Request
 
     public function defaultQuery(): array
     {
-        return array_filter([
-            'steamid' => $this->steamid,
-            'include_appinfo' => $this->include_appinfo,
-            'include_extended_appinfo' => $this->include_extended_appinfo,
-            'include_played_free_games' => $this->include_played_free_games,
-        ]);
+        return array_filter(
+            [
+                'steamid' => $this->steamid,
+                'include_appinfo' => $this->include_appinfo,
+                'include_extended_appinfo' => $this->include_extended_appinfo,
+                'include_played_free_games' => $this->include_played_free_games,
+            ],
+            fn($value) => $value !== null
+        );
     }
 
     public function createDtoFromResponse(Response $response): Collection
