@@ -1,0 +1,13 @@
+{
+  "statusCode": 200,
+  "headers": {
+    "Server": "nginx",
+    "Content-Type": "application\/json; charset=UTF-8",
+    "X-eresult": "1",
+    "Expires": "Tue, 27 Jan 2026 19:29:50 GMT",
+    "Date": "Tue, 27 Jan 2026 19:29:50 GMT",
+    "Content-Length": "235",
+    "Connection": "keep-alive"
+  },
+  "data": "{\"response\": {\"total_count\": 2,\"games\": [{\"appid\": 588430,\"name\": \"Fallout Shelter\",\"playtime_2weeks\": 339,\"playtime_forever\": 653,\"img_icon_url\": \"bb39b682fefd9a95486911cd991d8cdc5d7b57c9\"},{\"appid\": 735280,\"name\": \"EMERGENCY 20\",\"playtime_2weeks\": 23,\"playtime_forever\": 304,\"img_icon_url\": \"c797d090ed8603b7566262574660f0b496620bad\"}]}}"
+}

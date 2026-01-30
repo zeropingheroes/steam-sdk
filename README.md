@@ -44,7 +44,7 @@ $steam->getPlayerSummaries($steamid);
 | 🗒️ | **GET**  | `IPlayerService/GetBadges/v1`                                  |                                                   |
 | 🗒️ | **GET**  | `IPlayerService/GetCommunityBadgeProgress/v1`                  |                                                   |
 | 🗒️ | **GET**  | `IPlayerService/GetOwnedGames/v1`                              |                                                   |
-| 🗒️ | **GET**  | `IPlayerService/GetRecentlyPlayedGames/v1`                     |                                                   |
+| ✅️ | **GET**  | `IPlayerService/GetRecentlyPlayedGames/v1`                     | `$steam->getRecentlyPlayedGames()`                |
 | ✅ | **GET**  | `IPlayerService/GetSteamLevel/v1`                              | `$steam->getSteamLevel()`                         |
 | 🗒️ | **GET**  | `IPlayerService/IsPlayingSharedGame/v1`                        |                                                   |
 | 🗒️ | **GET**  | `ISteamUser/GetUserGroupList/v1`                               |                                                   |
