@@ -1,5 +1,8 @@
 # Steam APIs
 
+[![PHP Version](https://img.shields.io/packagist/dependency-v/zeropingheroes/steam-apis/php?style=flat-square)](https://packagist.org/packages/zeropingheroes/steam-apis)
+[![Laravel Version](https://img.shields.io/packagist/dependency-v/zeropingheroes/steam-apis/illuminate/support?style=flat-square&label=Laravel)](https://packagist.org/packages/zeropingheroes/steam-apis)
+
 Interface with Steam's APIs using PHP.
 
 Forked with ❤️ from [Astrotomic/steam-sdk](https://github.com/Astrotomic/steam-sdk).
