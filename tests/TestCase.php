@@ -2,13 +2,13 @@
 
 namespace Tests;
 
-use Zeropingheroes\SteamApis\SteamConnector;
-use Zeropingheroes\SteamApis\SteamSdkServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Saloon\Http\Faking\Fixture;
 use Saloon\Http\Faking\MockResponse;
 use Saloon\Http\PendingRequest;
 use Saloon\Laravel\Facades\Saloon;
+use Zeropingheroes\SteamApis\SteamConnector;
+use Zeropingheroes\SteamApis\SteamSdkServiceProvider;
 
 abstract class TestCase extends Orchestra
 {

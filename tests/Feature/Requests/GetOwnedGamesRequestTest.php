@@ -1,8 +1,8 @@
 <?php
 
+use PHPUnit\Framework\Assert;
 use Zeropingheroes\SteamApis\Data\OwnedApp;
 use Zeropingheroes\SteamApis\SteamConnector;
-use PHPUnit\Framework\Assert;
 
 it('returns a player\'s owned apps', function (string $steamid): void {
     $apps = app(SteamConnector::class)->getOwnedGames(steamid: $steamid);

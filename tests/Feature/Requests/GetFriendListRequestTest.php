@@ -1,9 +1,9 @@
 <?php
 
+use PHPUnit\Framework\Assert;
 use Saloon\Exceptions\Request\Statuses\UnauthorizedException;
 use Zeropingheroes\SteamApis\Data\Friend;
 use Zeropingheroes\SteamApis\SteamConnector;
-use PHPUnit\Framework\Assert;
 
 it('returns friend list', function (string $steamid): void {
     try {

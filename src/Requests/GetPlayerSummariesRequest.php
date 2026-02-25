@@ -2,12 +2,12 @@
 
 namespace Zeropingheroes\SteamApis\Requests;
 
-use Zeropingheroes\SteamApis\Data\PlayerSummary;
 use Illuminate\Support\Collection;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Saloon\Http\Response;
 use Saloon\Traits\Request\CreatesDtoFromResponse;
+use Zeropingheroes\SteamApis\Data\PlayerSummary;
 
 class GetPlayerSummariesRequest extends Request
 {

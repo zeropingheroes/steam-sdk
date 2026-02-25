@@ -1,7 +1,7 @@
 <?php
 
-use Zeropingheroes\SteamApis\SteamID;
 use PHPUnit\Framework\Assert;
+use Zeropingheroes\SteamApis\SteamID;
 
 it('resolves valid steam id variants', function (string|int $steamid): void {
     $id1 = SteamID::make($steamid);

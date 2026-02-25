@@ -2,13 +2,13 @@
 
 namespace Zeropingheroes\SteamApis\Requests;
 
-use Zeropingheroes\SteamApis\Data\NewsItem;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Collection;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Saloon\Http\Response;
 use Saloon\Traits\Request\CreatesDtoFromResponse;
+use Zeropingheroes\SteamApis\Data\NewsItem;
 
 class GetNewsForAppRequest extends Request
 {

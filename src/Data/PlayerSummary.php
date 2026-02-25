@@ -2,13 +2,13 @@
 
 namespace Zeropingheroes\SteamApis\Data;
 
-use Zeropingheroes\SteamApis\Enums\CommunityVisibilityState;
-use Zeropingheroes\SteamApis\Enums\PersonaState;
 use Carbon\CarbonImmutable;
 use Spatie\LaravelData\Attributes\WithCast;
 use Spatie\LaravelData\Casts\DateTimeInterfaceCast;
 use Spatie\LaravelData\Data;
 use xPaw\Steam\SteamID;
+use Zeropingheroes\SteamApis\Enums\CommunityVisibilityState;
+use Zeropingheroes\SteamApis\Enums\PersonaState;
 
 final class PlayerSummary extends Data
 {

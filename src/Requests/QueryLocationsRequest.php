@@ -2,15 +2,15 @@
 
 namespace Zeropingheroes\SteamApis\Requests;
 
-use Zeropingheroes\SteamApis\Data\LocationCity;
-use Zeropingheroes\SteamApis\Data\LocationCountry;
-use Zeropingheroes\SteamApis\Data\LocationState;
 use Illuminate\Support\Collection;
 use JsonException;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Saloon\Http\Response;
 use Saloon\Traits\Request\CreatesDtoFromResponse;
+use Zeropingheroes\SteamApis\Data\LocationCity;
+use Zeropingheroes\SteamApis\Data\LocationCountry;
+use Zeropingheroes\SteamApis\Data\LocationState;
 
 class QueryLocationsRequest extends Request
 {

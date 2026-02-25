@@ -2,12 +2,12 @@
 
 namespace Zeropingheroes\SteamApis\Data;
 
-use Zeropingheroes\SteamApis\Enums\Relationship;
 use Carbon\CarbonImmutable;
 use Spatie\LaravelData\Attributes\WithCast;
 use Spatie\LaravelData\Casts\DateTimeInterfaceCast;
 use Spatie\LaravelData\Data;
 use xPaw\Steam\SteamID;
+use Zeropingheroes\SteamApis\Enums\Relationship;
 
 final class Friend extends Data
 {

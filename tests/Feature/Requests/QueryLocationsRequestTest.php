@@ -1,10 +1,10 @@
 <?php
 
+use PHPUnit\Framework\Assert;
+use Saloon\Exceptions\Request\ClientException;
 use Zeropingheroes\SteamApis\Data\LocationCity;
 use Zeropingheroes\SteamApis\Data\LocationCountry;
 use Zeropingheroes\SteamApis\Data\LocationState;
-use PHPUnit\Framework\Assert;
-use Saloon\Exceptions\Request\ClientException;
 
 it('returns all countries', closure: function (): void {
     $countries = $this->steam->queryLocations();

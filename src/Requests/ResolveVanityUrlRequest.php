@@ -2,9 +2,9 @@
 
 namespace Zeropingheroes\SteamApis\Requests;
 
-use Zeropingheroes\SteamApis\Enums\VanityType;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
+use Zeropingheroes\SteamApis\Enums\VanityType;
 
 class ResolveVanityUrlRequest extends Request
 {

@@ -2,6 +2,13 @@
 
 namespace Zeropingheroes\SteamApis;
 
+use Carbon\CarbonInterface;
+use Illuminate\Support\Collection;
+use InvalidArgumentException;
+use Saloon\Http\Connector;
+use Saloon\Traits\Plugins\AcceptsJson;
+use Saloon\Traits\Plugins\AlwaysThrowOnErrors;
+use xPaw\Steam\SteamID;
 use Zeropingheroes\SteamApis\Data\AchievementPercentage;
 use Zeropingheroes\SteamApis\Data\ApiInterface;
 use Zeropingheroes\SteamApis\Data\App;
@@ -30,13 +37,6 @@ use Zeropingheroes\SteamApis\Requests\GetSteamLevelRequest;
 use Zeropingheroes\SteamApis\Requests\GetSupportedApiListRequest;
 use Zeropingheroes\SteamApis\Requests\QueryLocationsRequest;
 use Zeropingheroes\SteamApis\Requests\ResolveVanityUrlRequest;
-use Carbon\CarbonInterface;
-use Illuminate\Support\Collection;
-use InvalidArgumentException;
-use Saloon\Http\Connector;
-use Saloon\Traits\Plugins\AcceptsJson;
-use Saloon\Traits\Plugins\AlwaysThrowOnErrors;
-use xPaw\Steam\SteamID;
 
 class SteamConnector extends Connector
 {

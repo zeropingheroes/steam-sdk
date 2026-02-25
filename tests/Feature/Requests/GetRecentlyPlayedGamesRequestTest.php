@@ -1,8 +1,8 @@
 <?php
 
+use PHPUnit\Framework\Assert;
 use Zeropingheroes\SteamApis\Data\RecentlyPlayedApp;
 use Zeropingheroes\SteamApis\SteamConnector;
-use PHPUnit\Framework\Assert;
 
 it('returns a player\'s recently played apps', function (string $steamid): void {
     $apps = app(SteamConnector::class)->getRecentlyPlayedGames(steamid: $steamid);

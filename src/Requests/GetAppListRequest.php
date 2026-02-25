@@ -2,7 +2,6 @@
 
 namespace Zeropingheroes\SteamApis\Requests;
 
-use Zeropingheroes\SteamApis\Data\App;
 use Saloon\Enums\Method;
 use Saloon\Http\Connector;
 use Saloon\Http\Request;
@@ -12,6 +11,7 @@ use Saloon\PaginationPlugin\Contracts\Paginatable;
 use Saloon\PaginationPlugin\CursorPaginator;
 use Saloon\PaginationPlugin\Paginator;
 use Saloon\Traits\Request\CreatesDtoFromResponse;
+use Zeropingheroes\SteamApis\Data\App;
 
 class GetAppListRequest extends Request implements HasRequestPagination, Paginatable
 {
