@@ -1,7 +1,7 @@
 <?php
 
-use Astrotomic\SteamSdk\Data\PlayerBan;
-use Astrotomic\SteamSdk\SteamConnector;
+use Zeropingheroes\SteamApis\Data\PlayerBan;
+use Zeropingheroes\SteamApis\SteamConnector;
 use PHPUnit\Framework\Assert;
 
 it('returns player bans', function (string $steamid): void {

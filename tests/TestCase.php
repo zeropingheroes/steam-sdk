@@ -2,8 +2,8 @@
 
 namespace Tests;
 
-use Astrotomic\SteamSdk\SteamConnector;
-use Astrotomic\SteamSdk\SteamSdkServiceProvider;
+use Zeropingheroes\SteamApis\SteamConnector;
+use Zeropingheroes\SteamApis\SteamSdkServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Saloon\Http\Faking\Fixture;
 use Saloon\Http\Faking\MockResponse;

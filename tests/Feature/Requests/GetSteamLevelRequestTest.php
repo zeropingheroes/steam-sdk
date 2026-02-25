@@ -1,6 +1,6 @@
 <?php
 
-use Astrotomic\SteamSdk\SteamConnector;
+use Zeropingheroes\SteamApis\SteamConnector;
 use PHPUnit\Framework\Assert;
 
 it('returns single player level', function (string $steamid): void {

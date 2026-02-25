@@ -1,6 +1,6 @@
 <?php
 
-namespace Astrotomic\SteamSdk\Data;
+namespace Zeropingheroes\SteamApis\Data;
 
 use Carbon\CarbonImmutable;
 use Illuminate\Support\HtmlString;

@@ -1,7 +1,7 @@
 <?php
 
-use Astrotomic\SteamSdk\Data\AchievementPercentage;
-use Astrotomic\SteamSdk\SteamConnector;
+use Zeropingheroes\SteamApis\Data\AchievementPercentage;
+use Zeropingheroes\SteamApis\SteamConnector;
 use PHPUnit\Framework\Assert;
 
 it('returns global achievement percentages for game', function (int $gameid): void {

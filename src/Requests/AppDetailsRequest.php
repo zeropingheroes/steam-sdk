@@ -1,8 +1,8 @@
 <?php
 
-namespace Astrotomic\SteamSdk\Requests;
+namespace Zeropingheroes\SteamApis\Requests;
 
-use Astrotomic\SteamSdk\Data\StoreApp;
+use Zeropingheroes\SteamApis\Data\StoreApp;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Saloon\Http\Response;

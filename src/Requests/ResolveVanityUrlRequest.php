@@ -1,8 +1,8 @@
 <?php
 
-namespace Astrotomic\SteamSdk\Requests;
+namespace Zeropingheroes\SteamApis\Requests;
 
-use Astrotomic\SteamSdk\Enums\VanityType;
+use Zeropingheroes\SteamApis\Enums\VanityType;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 

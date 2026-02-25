@@ -1,6 +1,6 @@
 <?php
 
-namespace Astrotomic\SteamSdk\Enums;
+namespace Zeropingheroes\SteamApis\Enums;
 
 enum VanityType: int
 {

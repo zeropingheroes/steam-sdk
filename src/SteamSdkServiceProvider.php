@@ -1,6 +1,6 @@
 <?php
 
-namespace Astrotomic\SteamSdk;
+namespace Zeropingheroes\SteamApis;
 
 use Illuminate\Support\ServiceProvider;
 

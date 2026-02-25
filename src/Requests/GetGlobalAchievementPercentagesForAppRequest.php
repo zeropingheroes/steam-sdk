@@ -1,8 +1,8 @@
 <?php
 
-namespace Astrotomic\SteamSdk\Requests;
+namespace Zeropingheroes\SteamApis\Requests;
 
-use Astrotomic\SteamSdk\Data\AchievementPercentage;
+use Zeropingheroes\SteamApis\Data\AchievementPercentage;
 use Illuminate\Support\Collection;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;

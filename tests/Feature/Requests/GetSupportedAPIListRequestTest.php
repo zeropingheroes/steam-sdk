@@ -1,8 +1,8 @@
 <?php
 
-use Astrotomic\SteamSdk\Data\ApiInterface;
-use Astrotomic\SteamSdk\Data\ApiMethod;
-use Astrotomic\SteamSdk\Data\ApiParameter;
+use Zeropingheroes\SteamApis\Data\ApiInterface;
+use Zeropingheroes\SteamApis\Data\ApiMethod;
+use Zeropingheroes\SteamApis\Data\ApiParameter;
 use PHPUnit\Framework\Assert;
 
 it('returns supported api list', function (): void {

@@ -2,8 +2,8 @@
 
 use Astrotomic\PhpunitAssertions\NullableTypeAssertions;
 use Astrotomic\PhpunitAssertions\UrlAssertions;
-use Astrotomic\SteamSdk\Data\NewsItem;
-use Astrotomic\SteamSdk\SteamConnector;
+use Zeropingheroes\SteamApis\Data\NewsItem;
+use Zeropingheroes\SteamApis\SteamConnector;
 use PHPUnit\Framework\Assert;
 
 it('returns news for app', function (int $appid): void {

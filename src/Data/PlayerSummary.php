@@ -1,9 +1,9 @@
 <?php
 
-namespace Astrotomic\SteamSdk\Data;
+namespace Zeropingheroes\SteamApis\Data;
 
-use Astrotomic\SteamSdk\Enums\CommunityVisibilityState;
-use Astrotomic\SteamSdk\Enums\PersonaState;
+use Zeropingheroes\SteamApis\Enums\CommunityVisibilityState;
+use Zeropingheroes\SteamApis\Enums\PersonaState;
 use Carbon\CarbonImmutable;
 use Spatie\LaravelData\Attributes\WithCast;
 use Spatie\LaravelData\Casts\DateTimeInterfaceCast;

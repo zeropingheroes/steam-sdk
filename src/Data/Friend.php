@@ -1,8 +1,8 @@
 <?php
 
-namespace Astrotomic\SteamSdk\Data;
+namespace Zeropingheroes\SteamApis\Data;
 
-use Astrotomic\SteamSdk\Enums\Relationship;
+use Zeropingheroes\SteamApis\Enums\Relationship;
 use Carbon\CarbonImmutable;
 use Spatie\LaravelData\Attributes\WithCast;
 use Spatie\LaravelData\Casts\DateTimeInterfaceCast;

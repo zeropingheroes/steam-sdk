@@ -1,7 +1,7 @@
 <?php
 
-use Astrotomic\SteamSdk\Data\StoreApp;
-use Astrotomic\SteamSdk\SteamConnector;
+use Zeropingheroes\SteamApis\Data\StoreApp;
+use Zeropingheroes\SteamApis\SteamConnector;
 use PHPUnit\Framework\Assert;
 
 it('returns app details', function (int $appid): void {

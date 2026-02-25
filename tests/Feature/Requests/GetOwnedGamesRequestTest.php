@@ -1,7 +1,7 @@
 <?php
 
-use Astrotomic\SteamSdk\Data\OwnedApp;
-use Astrotomic\SteamSdk\SteamConnector;
+use Zeropingheroes\SteamApis\Data\OwnedApp;
+use Zeropingheroes\SteamApis\SteamConnector;
 use PHPUnit\Framework\Assert;
 
 it('returns a player\'s owned apps', function (string $steamid): void {

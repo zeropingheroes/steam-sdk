@@ -1,8 +1,8 @@
 <?php
 
-use Astrotomic\SteamSdk\Data\Friend;
-use Astrotomic\SteamSdk\Exceptions\UnauthorizedException;
-use Astrotomic\SteamSdk\SteamConnector;
+use Saloon\Exceptions\Request\Statuses\UnauthorizedException;
+use Zeropingheroes\SteamApis\Data\Friend;
+use Zeropingheroes\SteamApis\SteamConnector;
 use PHPUnit\Framework\Assert;
 
 it('returns friend list', function (string $steamid): void {

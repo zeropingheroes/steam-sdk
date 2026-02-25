@@ -1,6 +1,6 @@
 <?php
 
-namespace Astrotomic\SteamSdk\Enums;
+namespace Zeropingheroes\SteamApis\Enums;
 
 enum CommunityVisibilityState: int
 {

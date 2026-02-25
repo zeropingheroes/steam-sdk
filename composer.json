@@ -1,6 +1,6 @@
 {
-    "name": "astrotomic/steam-sdk",
-    "description": "Interact with Steam API.",
+    "name": "zeropingheroes/steam-apis",
+    "description": "Interface with Steam's APIs.",
     "license": "MIT",
     "authors": [
         {
@@ -8,16 +8,12 @@
             "email": "gummibeer@astrotomic.info",
             "homepage": "https://astrotomic.info",
             "role": "Developer"
-        }
-    ],
-    "funding": [
-        {
-            "type": "github",
-            "url": "https://github.com/sponsors/Gummibeer"
         },
         {
-            "type": "other",
-            "url": "https://forest.astrotomic.info"
+            "name": "Olly Baker",
+            "email": "ilumos@gmail.com",
+            "homepage": "https://ilumos.co.uk",
+            "role": "Developer"
         }
     ],
     "require": {
@@ -40,7 +36,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Astrotomic\\SteamSdk\\": "src/"
+            "Zeropingheroes\\SteamApis\\": "src/"
         }
     },
     "autoload-dev": {
@@ -63,7 +59,7 @@
         },
         "laravel": {
             "providers": [
-                "Astrotomic\\SteamSdk\\SteamSdkServiceProvider"
+                "Zeropingheroes\\SteamApis\\SteamSdkServiceProvider"
             ]
         }
     },

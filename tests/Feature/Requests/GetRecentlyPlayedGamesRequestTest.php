@@ -1,7 +1,7 @@
 <?php
 
-use Astrotomic\SteamSdk\Data\RecentlyPlayedApp;
-use Astrotomic\SteamSdk\SteamConnector;
+use Zeropingheroes\SteamApis\Data\RecentlyPlayedApp;
+use Zeropingheroes\SteamApis\SteamConnector;
 use PHPUnit\Framework\Assert;
 
 it('returns a player\'s recently played apps', function (string $steamid): void {

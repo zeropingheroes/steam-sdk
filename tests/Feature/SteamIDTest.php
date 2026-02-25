@@ -1,6 +1,6 @@
 <?php
 
-use Astrotomic\SteamSdk\SteamID;
+use Zeropingheroes\SteamApis\SteamID;
 use PHPUnit\Framework\Assert;
 
 it('resolves valid steam id variants', function (string|int $steamid): void {

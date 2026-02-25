@@ -1,10 +1,10 @@
 <?php
 
-namespace Astrotomic\SteamSdk\Requests;
+namespace Zeropingheroes\SteamApis\Requests;
 
-use Astrotomic\SteamSdk\Data\LocationCity;
-use Astrotomic\SteamSdk\Data\LocationCountry;
-use Astrotomic\SteamSdk\Data\LocationState;
+use Zeropingheroes\SteamApis\Data\LocationCity;
+use Zeropingheroes\SteamApis\Data\LocationCountry;
+use Zeropingheroes\SteamApis\Data\LocationState;
 use Illuminate\Support\Collection;
 use JsonException;
 use Saloon\Enums\Method;

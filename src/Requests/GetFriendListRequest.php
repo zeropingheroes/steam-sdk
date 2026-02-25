@@ -1,9 +1,9 @@
 <?php
 
-namespace Astrotomic\SteamSdk\Requests;
+namespace Zeropingheroes\SteamApis\Requests;
 
-use Astrotomic\SteamSdk\Data\Friend;
-use Astrotomic\SteamSdk\Enums\Relationship;
+use Zeropingheroes\SteamApis\Data\Friend;
+use Zeropingheroes\SteamApis\Enums\Relationship;
 use Illuminate\Support\Collection;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;

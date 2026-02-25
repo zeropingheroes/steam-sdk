@@ -1,7 +1,7 @@
 <?php
 
-use Astrotomic\SteamSdk\Data\App;
-use Astrotomic\SteamSdk\SteamConnector;
+use Zeropingheroes\SteamApis\Data\App;
+use Zeropingheroes\SteamApis\SteamConnector;
 use PHPUnit\Framework\Assert;
 
 it('returns app list', function (): void {

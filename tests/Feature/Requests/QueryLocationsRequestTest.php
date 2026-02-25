@@ -1,8 +1,8 @@
 <?php
 
-use Astrotomic\SteamSdk\Data\LocationCity;
-use Astrotomic\SteamSdk\Data\LocationCountry;
-use Astrotomic\SteamSdk\Data\LocationState;
+use Zeropingheroes\SteamApis\Data\LocationCity;
+use Zeropingheroes\SteamApis\Data\LocationCountry;
+use Zeropingheroes\SteamApis\Data\LocationState;
 use PHPUnit\Framework\Assert;
 use Saloon\Exceptions\Request\ClientException;
 

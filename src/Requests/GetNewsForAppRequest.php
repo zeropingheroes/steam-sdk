@@ -1,8 +1,8 @@
 <?php
 
-namespace Astrotomic\SteamSdk\Requests;
+namespace Zeropingheroes\SteamApis\Requests;
 
-use Astrotomic\SteamSdk\Data\NewsItem;
+use Zeropingheroes\SteamApis\Data\NewsItem;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Collection;
 use Saloon\Enums\Method;
