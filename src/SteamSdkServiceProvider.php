@@ -4,6 +4,7 @@ namespace Zeropingheroes\SteamApis;
 
 use Illuminate\Support\ServiceProvider;
 use Zeropingheroes\SteamApis\SteamCommunityApi\SteamCommunityApiConnector;
+use Zeropingheroes\SteamApis\SteamStoreApi\SteamStoreApiConnector;
 use Zeropingheroes\SteamApis\SteamWebApi\SteamWebApiConnector;
 
 class SteamSdkServiceProvider extends ServiceProvider
