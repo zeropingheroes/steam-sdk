@@ -32,7 +32,7 @@ class GetNewsForAppRequest extends Request
 
     public function defaultQuery(): array
     {
-        return array_filter([
+        return (array) array_filter([
             'appid' => $this->appid,
             'maxlength' => $this->maxlength,
             'enddate' => $this->enddate?->timestamp,
