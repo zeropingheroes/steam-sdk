@@ -158,8 +158,7 @@ class SteamWebApiConnector extends Connector
         ?bool $include_appinfo = false,
         ?bool $include_extended_appinfo = null,
         ?bool $include_played_free_games = null,
-    ): Collection
-    {
+    ): Collection {
         return $this->send(
             new GetOwnedGamesRequest(
                 $steamid,

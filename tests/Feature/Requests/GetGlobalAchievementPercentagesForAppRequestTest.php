@@ -1,8 +1,8 @@
 <?php
 
 use PHPUnit\Framework\Assert;
-use Zeropingheroes\SteamApis\SteamWebApi\SteamWebApiConnector;
 use Zeropingheroes\SteamApis\SteamWebApi\Data\AchievementPercentage;
+use Zeropingheroes\SteamApis\SteamWebApi\SteamWebApiConnector;
 
 it('returns global achievement percentages for game', function (int $gameid): void {
     $achievements = app(SteamWebApiConnector::class)->getGlobalAchievementPercentagesForApp(gameid: $gameid);

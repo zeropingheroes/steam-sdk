@@ -3,8 +3,8 @@
 use Astrotomic\PhpunitAssertions\NullableTypeAssertions;
 use Astrotomic\PhpunitAssertions\UrlAssertions;
 use PHPUnit\Framework\Assert;
-use Zeropingheroes\SteamApis\SteamWebApi\SteamWebApiConnector;
 use Zeropingheroes\SteamApis\SteamWebApi\Data\NewsItem;
+use Zeropingheroes\SteamApis\SteamWebApi\SteamWebApiConnector;
 
 it('returns news for app', function (int $appid): void {
     $news = app(SteamWebApiConnector::class)->getNewsForApp(appid: $appid);

@@ -8,9 +8,9 @@ use Saloon\Http\Faking\MockResponse;
 use Saloon\Http\PendingRequest;
 use Saloon\Laravel\Facades\Saloon;
 use Zeropingheroes\SteamApis\SteamCommunityApi\SteamCommunityApiConnector;
+use Zeropingheroes\SteamApis\SteamSdkServiceProvider;
 use Zeropingheroes\SteamApis\SteamStoreApi\SteamStoreApiConnector;
 use Zeropingheroes\SteamApis\SteamWebApi\SteamWebApiConnector;
-use Zeropingheroes\SteamApis\SteamSdkServiceProvider;
 
 abstract class TestCase extends Orchestra
 {
@@ -50,7 +50,7 @@ abstract class TestCase extends Orchestra
             },
         ]);
 
-        $this->steamCommunityApiConnector = new SteamCommunityApiConnector();
+        $this->steamCommunityApiConnector = new SteamCommunityApiConnector;
 
         Saloon::fake([
             SteamStoreApiConnector::class => function (PendingRequest $request): Fixture {
@@ -65,7 +65,7 @@ abstract class TestCase extends Orchestra
             },
         ]);
 
-        $this->steamStoreApiConnector = new SteamStoreApiConnector();
+        $this->steamStoreApiConnector = new SteamStoreApiConnector;
     }
 
     protected function getPackageProviders($app): array

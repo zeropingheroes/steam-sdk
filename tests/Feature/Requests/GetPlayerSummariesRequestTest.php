@@ -2,8 +2,8 @@
 
 use Astrotomic\PhpunitAssertions\UrlAssertions;
 use PHPUnit\Framework\Assert;
-use Zeropingheroes\SteamApis\SteamWebApi\SteamWebApiConnector;
 use Zeropingheroes\SteamApis\SteamWebApi\Data\PlayerSummary;
+use Zeropingheroes\SteamApis\SteamWebApi\SteamWebApiConnector;
 
 it('returns player summaries', function (string $steamid): void {
     $players = app(SteamWebApiConnector::class)->getPlayerSummaries(steamids: $steamid);
