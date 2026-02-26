@@ -14,13 +14,16 @@ class SteamSdkServiceProvider extends ServiceProvider
         $this->app->bind(SteamWebApiConnector::class, function (): SteamWebApiConnector {
             return new SteamWebApiConnector(
                 apiKey: config('services.steam.api_key'),
+                rateLimitStorePath: config('services.steam.rate_limit_store_path'),
             );
         });
         $this->app->bind(SteamCommunityApiConnector::class, function (): SteamCommunityApiConnector {
             return new SteamCommunityApiConnector;
         });
         $this->app->bind(SteamStoreApiConnector::class, function (): SteamStoreApiConnector {
-            return new SteamStoreApiConnector;
+            return new SteamStoreApiConnector(
+                rateLimitStorePath: config('services.steam.rate_limit_store_path'),
+            );
         });
     }
 }

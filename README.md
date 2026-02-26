@@ -21,6 +21,7 @@ In your Laravel project's `config/services.php` add your [Steam API key](https:/
 return [
     'steam' => [
         'api_key' => env('STEAM_API_KEY'),
+        'rate_limit_store_path' => storage_path('app/steam-api'),
     ],
 ];
 ```

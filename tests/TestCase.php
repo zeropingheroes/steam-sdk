@@ -35,7 +35,10 @@ abstract class TestCase extends Orchestra
             },
         ]);
 
-        $this->steamWebApiConnector = new SteamWebApiConnector(getenv('STEAM_API_KEY'));
+        $this->steamWebApiConnector = new SteamWebApiConnector(
+            getenv('STEAM_API_KEY'),
+            storage_path(''),
+        );
 
         Saloon::fake([
             SteamCommunityApiConnector::class => function (PendingRequest $request): Fixture {
@@ -65,7 +68,9 @@ abstract class TestCase extends Orchestra
             },
         ]);
 
-        $this->steamStoreApiConnector = new SteamStoreApiConnector;
+        $this->steamStoreApiConnector = new SteamStoreApiConnector(
+            storage_path('')
+        );
     }
 
     protected function getPackageProviders($app): array
@@ -79,6 +84,7 @@ abstract class TestCase extends Orchestra
     {
         $app['config']->set('services.steam', [
             'api_key' => env('STEAM_API_KEY'),
+            'rate_limit_store_path' => storage_path(''),
         ]);
     }
 }

@@ -7,6 +7,10 @@ use Illuminate\Support\Collection;
 use InvalidArgumentException;
 use Saloon\Http\Auth\QueryAuthenticator;
 use Saloon\Http\Connector;
+use Saloon\RateLimitPlugin\Contracts\RateLimitStore;
+use Saloon\RateLimitPlugin\Limit;
+use Saloon\RateLimitPlugin\Stores\FileStore;
+use Saloon\RateLimitPlugin\Traits\HasRateLimits;
 use Saloon\Traits\Plugins\AcceptsJson;
 use Saloon\Traits\Plugins\AlwaysThrowOnErrors;
 use xPaw\Steam\SteamID;
@@ -37,9 +41,11 @@ class SteamWebApiConnector extends Connector
 {
     use AcceptsJson;
     use AlwaysThrowOnErrors;
+    use HasRateLimits;
 
     public function __construct(
         public readonly string $apiKey,
+        public readonly string $rateLimitStorePath,
     ) {}
 
     public function resolveBaseUrl(): string
@@ -50,6 +56,23 @@ class SteamWebApiConnector extends Connector
     protected function defaultAuth(): QueryAuthenticator
     {
         return new QueryAuthenticator('key', $this->apiKey);
+    }
+
+    protected function resolveLimits(): array
+    {
+        return [
+            Limit::allow(100000)->everyDay(),
+        ];
+    }
+
+    protected function getLimiterPrefix(): ?string
+    {
+        return 'api.steampowered.com';
+    }
+
+    protected function resolveRateLimitStore(): RateLimitStore
+    {
+        return new FileStore($this->rateLimitStorePath);
     }
 
     /**
