@@ -33,6 +33,9 @@ $steamWebApi->getPlayerSummaries($steamid);
 
 $steamCommunityApi = app(\Zeropingheroes\SteamApis\SteamCommunityApi\SteamCommunityApiConnector::class);
 $steamCommunityApi->queryLocations(countrycode: 'DE');
+
+$steamStoreApi = app(\Zeropingheroes\SteamApis\SteamStoreApi\SteamStoreApiConnector::class);
+$steamStoreApi->appDetails(appid: 440);
 ```
 
 ### Implemented requests
