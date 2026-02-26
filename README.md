@@ -28,9 +28,11 @@ return [
 ## Usage example
 
 ```php
-$steam = app(\Zeropingheroes\SteamApis\SteamConnector::class);
+$steamWebApi = app(\Zeropingheroes\SteamApis\SteamWebApiConnector::class);
+$steamWebApi->getPlayerSummaries($steamid);
 
-$steam->getPlayerSummaries($steamid);
+$steamCommunityApi = app(\Zeropingheroes\SteamApis\SteamCommunityApiConnector::class);
+$steamCommunityApi->queryLocations(countrycode: 'DE');
 ```
 
 ### Implemented requests

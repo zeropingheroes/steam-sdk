@@ -3,10 +3,10 @@
 use Astrotomic\PhpunitAssertions\UrlAssertions;
 use PHPUnit\Framework\Assert;
 use Zeropingheroes\SteamApis\Data\PlayerSummary;
-use Zeropingheroes\SteamApis\SteamConnector;
+use Zeropingheroes\SteamApis\SteamWebApiConnector;
 
 it('returns player summaries', function (string $steamid): void {
-    $players = app(SteamConnector::class)->getPlayerSummaries(steamids: $steamid);
+    $players = app(SteamWebApiConnector::class)->getPlayerSummaries(steamids: $steamid);
 
     Assert::assertContainsOnlyInstancesOf(PlayerSummary::class, $players);
 
@@ -20,7 +20,7 @@ it('returns player summaries', function (string $steamid): void {
 })->with('userids');
 
 it('returns single player summary', function (string $steamid): void {
-    $player = app(SteamConnector::class)->getPlayerSummary(steamid: $steamid);
+    $player = app(SteamWebApiConnector::class)->getPlayerSummary(steamid: $steamid);
 
     Assert::assertInstanceOf(PlayerSummary::class, $player);
 

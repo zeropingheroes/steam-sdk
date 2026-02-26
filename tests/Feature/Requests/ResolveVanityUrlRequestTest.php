@@ -4,7 +4,7 @@ use PHPUnit\Framework\Assert;
 use xPaw\Steam\SteamID;
 
 it('returns resolved steamid', closure: function (string $vanityurl, string $expected): void {
-    $steamid = $this->steam->resolveVanityUrl(vanityurl: $vanityurl);
+    $steamid = $this->steamWebApiConnector->resolveVanityUrl(vanityurl: $vanityurl);
 
     Assert::assertInstanceOf(SteamID::class, $steamid);
     Assert::assertSame($expected, $steamid->ConvertToUInt64());
@@ -17,7 +17,7 @@ it('returns resolved steamid', closure: function (string $vanityurl, string $exp
 ]);
 
 it('returns null for invalid vanity', closure: function (string $vanityurl): void {
-    $steamid = $this->steam->resolveVanityUrl(vanityurl: $vanityurl);
+    $steamid = $this->steamWebApiConnector->resolveVanityUrl(vanityurl: $vanityurl);
 
     Assert::assertNull($steamid);
 })->with([

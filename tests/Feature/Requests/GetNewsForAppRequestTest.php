@@ -4,10 +4,10 @@ use Astrotomic\PhpunitAssertions\NullableTypeAssertions;
 use Astrotomic\PhpunitAssertions\UrlAssertions;
 use PHPUnit\Framework\Assert;
 use Zeropingheroes\SteamApis\Data\NewsItem;
-use Zeropingheroes\SteamApis\SteamConnector;
+use Zeropingheroes\SteamApis\SteamWebApiConnector;
 
 it('returns news for app', function (int $appid): void {
-    $news = app(SteamConnector::class)->getNewsForApp(appid: $appid);
+    $news = app(SteamWebApiConnector::class)->getNewsForApp(appid: $appid);
 
     Assert::assertContainsOnlyInstancesOf(NewsItem::class, $news);
 

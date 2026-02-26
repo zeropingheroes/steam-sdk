@@ -35,7 +35,7 @@ class QueryLocationsRequest extends Request
             }
         }
 
-        return "https://steamcommunity.com/actions/QueryLocations{$query}";
+        return "/actions/QueryLocations{$query}";
     }
 
     /**

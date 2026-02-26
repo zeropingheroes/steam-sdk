@@ -3,11 +3,11 @@
 use PHPUnit\Framework\Assert;
 use Saloon\Exceptions\Request\Statuses\UnauthorizedException;
 use Zeropingheroes\SteamApis\Data\Friend;
-use Zeropingheroes\SteamApis\SteamConnector;
+use Zeropingheroes\SteamApis\SteamWebApiConnector;
 
 it('returns friend list', function (string $steamid): void {
     try {
-        $friends = app(SteamConnector::class)->getFriendList(steamid: $steamid);
+        $friends = app(SteamWebApiConnector::class)->getFriendList(steamid: $steamid);
 
         Assert::assertContainsOnlyInstancesOf(Friend::class, $friends);
 

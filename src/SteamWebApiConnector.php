@@ -38,7 +38,7 @@ use Zeropingheroes\SteamApis\Requests\GetSupportedApiListRequest;
 use Zeropingheroes\SteamApis\Requests\QueryLocationsRequest;
 use Zeropingheroes\SteamApis\Requests\ResolveVanityUrlRequest;
 
-class SteamConnector extends Connector
+class SteamWebApiConnector extends Connector
 {
     use AcceptsJson;
     use AlwaysThrowOnErrors;

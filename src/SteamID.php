@@ -49,7 +49,7 @@ class SteamID implements Stringable
             },
             function (string|int $id): ?xPawSteamID {
                 if (is_string($id)) {
-                    return app(SteamConnector::class)->resolveVanityUrl($id);
+                    return app(SteamWebApiConnector::class)->resolveVanityUrl($id);
                 }
 
                 return null;

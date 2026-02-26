@@ -2,17 +2,17 @@
 
 use PHPUnit\Framework\Assert;
 use Zeropingheroes\SteamApis\Data\RecentlyPlayedApp;
-use Zeropingheroes\SteamApis\SteamConnector;
+use Zeropingheroes\SteamApis\SteamWebApiConnector;
 
 it('returns a player\'s recently played apps', function (string $steamid): void {
-    $apps = app(SteamConnector::class)->getRecentlyPlayedGames(steamid: $steamid);
+    $apps = app(SteamWebApiConnector::class)->getRecentlyPlayedGames(steamid: $steamid);
 
     Assert::assertContainsOnlyInstancesOf(RecentlyPlayedApp::class, $apps);
 
 })->with('userids');
 
 it('returns an empty collection', function (string $steamid): void {
-    $apps = app(SteamConnector::class)->getRecentlyPlayedGames(steamid: $steamid);
+    $apps = app(SteamWebApiConnector::class)->getRecentlyPlayedGames(steamid: $steamid);
 
     Assert::assertEmpty($apps);
 

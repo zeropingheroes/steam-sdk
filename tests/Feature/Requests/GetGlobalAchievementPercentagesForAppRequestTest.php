@@ -2,10 +2,10 @@
 
 use PHPUnit\Framework\Assert;
 use Zeropingheroes\SteamApis\Data\AchievementPercentage;
-use Zeropingheroes\SteamApis\SteamConnector;
+use Zeropingheroes\SteamApis\SteamWebApiConnector;
 
 it('returns global achievement percentages for game', function (int $gameid): void {
-    $achievements = app(SteamConnector::class)->getGlobalAchievementPercentagesForApp(gameid: $gameid);
+    $achievements = app(SteamWebApiConnector::class)->getGlobalAchievementPercentagesForApp(gameid: $gameid);
 
     Assert::assertContainsOnlyInstancesOf(AchievementPercentage::class, $achievements);
 

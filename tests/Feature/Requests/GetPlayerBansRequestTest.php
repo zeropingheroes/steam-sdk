@@ -2,10 +2,10 @@
 
 use PHPUnit\Framework\Assert;
 use Zeropingheroes\SteamApis\Data\PlayerBan;
-use Zeropingheroes\SteamApis\SteamConnector;
+use Zeropingheroes\SteamApis\SteamWebApiConnector;
 
 it('returns player bans', function (string $steamid): void {
-    $bans = app(SteamConnector::class)->getPlayerBans(steamids: $steamid);
+    $bans = app(SteamWebApiConnector::class)->getPlayerBans(steamids: $steamid);
 
     Assert::assertContainsOnlyInstancesOf(PlayerBan::class, $bans);
 
@@ -15,7 +15,7 @@ it('returns player bans', function (string $steamid): void {
 })->with('userids');
 
 it('returns single player bans', function (string $steamid): void {
-    $ban = app(SteamConnector::class)->getPlayerBan(steamid: $steamid);
+    $ban = app(SteamWebApiConnector::class)->getPlayerBan(steamid: $steamid);
 
     Assert::assertInstanceOf(PlayerBan::class, $ban);
 

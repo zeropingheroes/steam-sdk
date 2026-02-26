@@ -6,7 +6,7 @@ use Zeropingheroes\SteamApis\Data\ApiMethod;
 use Zeropingheroes\SteamApis\Data\ApiParameter;
 
 it('returns supported api list', function (): void {
-    $interfaces = $this->steam->getSupportedApiList();
+    $interfaces = $this->steamWebApiConnector->getSupportedApiList();
 
     Assert::assertContainsOnlyInstancesOf(ApiInterface::class, $interfaces);
 

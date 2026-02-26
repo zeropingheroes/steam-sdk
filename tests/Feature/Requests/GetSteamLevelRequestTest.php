@@ -1,10 +1,10 @@
 <?php
 
 use PHPUnit\Framework\Assert;
-use Zeropingheroes\SteamApis\SteamConnector;
+use Zeropingheroes\SteamApis\SteamWebApiConnector;
 
 it('returns single player level', function (string $steamid): void {
-    $level = app(SteamConnector::class)->getSteamLevel(steamid: $steamid);
+    $level = app(SteamWebApiConnector::class)->getSteamLevel(steamid: $steamid);
 
     Assert::assertIsInt($level);
     Assert::assertGreaterThanOrEqual(0, $level);
