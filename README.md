@@ -28,14 +28,18 @@ return [
 ## Usage example
 
 ```php
-$steamWebApi = app(\Zeropingheroes\SteamApis\SteamCommunityApi\SteamWebApiConnector::class);
-$steamWebApi->getPlayerSummaries($steamid);
+use Zeropingheroes\SteamApis\SteamWebApiConnector\SteamWebApiConnector;
+use Zeropingheroes\SteamApis\SteamCommunityApi\SteamCommunityApiConnector;
+use Zeropingheroes\SteamApis\SteamStoreApi\SteamStoreApiConnector;
 
-$steamCommunityApi = app(\Zeropingheroes\SteamApis\SteamCommunityApi\SteamCommunityApiConnector::class);
-$steamCommunityApi->queryLocations(countrycode: 'DE');
+$steamWebApi = app(SteamWebApiConnector::class);
+$playerSummary = $steamWebApi->getPlayerSummaries(steamids: [76561197960287930, 76561198061912622]);
 
-$steamStoreApi = app(\Zeropingheroes\SteamApis\SteamStoreApi\SteamStoreApiConnector::class);
-$steamStoreApi->appDetails(appid: 440);
+$steamCommunityApi = app(SteamCommunityApiConnector::class);
+$locations = $steamCommunityApi->queryLocations(countrycode: 'DE');
+
+$steamStoreApi = app(SteamStoreApiConnector::class);
+$appDetails = $steamStoreApi->appDetails(appid: 440);
 ```
 
 ### Implemented requests
